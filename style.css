@@ -1,0 +1,820 @@
+#site-box { Width : 750px ; }
+
+/* ▼タブ機能の掲載領域の装飾(※必須ではありません) */
+.tabbox { margin: 0px; padding: 1em; background-color: #ffffff; }
+
+/* ▼タブ機能を制御するラジオボタン(非表示にする) */
+.tabbox input { display: none; }
+
+/* ▼タブ(共通装飾＋非選択状態の装飾) */
+.tab {
+   display: inline-block;
+   border-width: 1px 1px 0px 1px;
+   border-style: solid;
+   border-color: black;
+   border-radius: 0.75em 0.75em 0px 0px;
+   padding: 0.75em 1em;
+   color: black;
+   background-color: #e0e0e0;
+   font-weight: bold;
+}
+
+/* ▼タブにマウスポインタが載った際の装飾 */
+.tab:hover {
+   background-color: #ccffcc;
+   color: green;
+   cursor: pointer;
+}
+
+/* ▼チェックが入っているラジオボタンの隣にあるタブの装飾(＝選択状態のタブ) */
+input:checked + .tab {
+   color: black;
+   background-color: #ffffcc;
+   position: relative;
+   z-index: 10;
+}
+
+/* ▼タブの中身(共通装飾＋非選択状態の装飾) */
+.tabcontent {
+   display: none;
+   border: 1px solid black;
+   margin-top: -1px;
+   padding: 1em;
+   position: relative;
+   z-index: 0;
+   background-color: #ffffcc;
+}
+
+/* ▼チェックが入っているラジオボタンに対応するタブの中身を表示する */
+#tabcheck1:checked ~ #tabcontent1 { display: block; }
+#tabcheck2:checked ~ #tabcontent2 { display: block; }
+#tabcheck3:checked ~ #tabcontent3 { display: block; }
+
+/* 目次関係 */
+/* ▼buttonを均等に配置 */  
+.inner {
+   padding-top: 30px;
+   display: flex;
+   justify-content: space-evenly;
+}
+/* ▼目次のボタンの下にマージン*/
+.btmrgn{
+   margin-bottom: 0.5rem;
+}
+/* ▼目次年号位置調整*/
+.upmrgn{
+   margin-top: 1.5rem;
+   margin-bottom: -0.1rem;
+}
+
+/* ▼一般*/
+
+/* ▼太字 */
+.hutoji{
+   font-weight: bold; 
+}
+/* ▼テキスト左右位置 */
+.tyuou{
+   text-align: center;
+}
+   .txright{
+   text-align: right;
+}
+   .txleft{
+   text-align: left;
+}
+
+/* ▼テキスト上下位置 */
+
+/* vertical-alignが使えるのは、インライン要素とテーブルセルだけです。ブロックレベルでは使用できないので、注意しましょう。ブロック全体を上下に調節したいときは、marginやpaddingを使用します。*/
+
+.vtyuou{
+   vertical-align: middle;
+}
+
+.vtop{
+   vertical-align: top;
+}
+
+.vtop{
+   vertical-align: bottom;
+}
+
+
+/* ▼文頭一字下げ */
+.indenhead{
+   text-indent: 1rem;
+}
+/* ▼文頭2字下げ */
+.indenhead2{
+   text-indent: 2rem;
+}
+/* ▼文頭3字下げ */
+.indenhead3{
+   text-indent: 3rem;
+}
+/* ▼小節字下げ */
+.indenhead10{
+   margin-left: 1rem;
+   text-indent: 1rem;
+}
+/* ▼小節一字下げ */
+.indenhead11{
+   margin-left: 2rem;
+   text-indent: 1rem;
+}
+/* ▼小節2字下げ */
+.indenhead21{
+   margin-left: 3rem;
+   text-indent: 1rem;
+}
+/* ▼小節3字下げ */
+.indenhead31{
+   margin-left: 4rem;
+   text-indent: 1rem;
+}
+/* ▼ぶら下げインデント */
+.indenburas{
+   margin-left: 1rem;
+   text-indent: -1rem;
+}
+/* ▼ぶら下げインデント2 1)用 */
+.indenburas2{
+   margin-left: 2rem;
+   text-indent: -1rem;
+}
+/* ▼ぶら下げインデント2 （3）用 */
+.indenburas3{
+   margin-left: 3rem;
+   text-indent: -1rem;
+}
+
+.indenburas4{
+   margin-left: 4rem;
+   text-indent: -1rem;
+}
+
+.ori{
+   word-break: break-all;
+}
+
+/* ▼文中1字空白 */
+.sps0{
+  margin-left: 0.5rem; 
+}
+
+/* ▼文中1字空白 */
+.sps1{
+  margin-left: 1rem; 
+}
+/* ▼文中2字空白 */
+.sps2{
+   margin-left: 2rem;
+}
+/* ▼段落間行間調整（せばめる） */
+   /* 上の行 */
+.seba1{
+   margin-bottom: 0.2rem;
+}
+   /* 下の行 */
+.seba2{
+   margin-top: 0.2rem;
+}
+   /* 中の行 */
+.seba3{
+   margin-top: 0.2rem;
+   margin-bottom: 0.2rem;
+}
+/* ▼太字，通常（戻す） */
+.hutoji{
+   font-weight: bold; 
+}
+.hutuu{
+   font-weight: normal;
+}
+
+/* ▼アンダーラインをひく*/
+.underln {
+   text-decoration: underline red;
+   text-underline-offset:0.2em;
+   /*padding: 1px;
+   border-bottom: solid 1px red;*/
+}
+.underlnblue {
+   text-decoration: underline rgb(4, 0, 255);
+   text-underline-offset:0.2em;
+   /*padding: 1px;
+   border-bottom: solid 1px red;*/
+}
+/* ▼表下に空行と見せるマージン*/
+.utblmrgn{
+   margin-top: 3rem; 
+}
+/*文中の文字を囲む（白抜き問題等）*/
+.kakomu{
+   line-height: 225%;
+   padding:0px 5px; /* 枠と文字の空間 */
+   margin:0 5px; /* 枠の外の空間 */
+   background-color:transparent;/*rgb(255,255,255); /* 枠の背景色 */
+   border:2px solid rgb(0,0,0); /* 枠の線の太さ・種類・色 */
+   border-radius:0px; /* 枠の角を丸くする */
+   box-shadow: 0px 0px 0px #ddd; /*影をいれる*/
+   font-family:inherit; /* フォントの種類を継承する */
+   font-size:1em;	/* フォントの大きさ */
+}
+
+/* 文字透明 */
+.font0{
+   opacity: 0;
+}
+
+/* テキストコンテナ（設定しないとスクロール，overflow-x: autoが効かない） */
+/*
+@media screen and (max-width: 600px) {
+   .txtcontainer{
+      width: 1000px;
+      overflow-x: scroll;          
+   }
+   .box p {
+      width: 1050px;               
+   }
+   }
+*/
+
+/* 表（table）の設定 */
+/*
+.slider table {
+   margin: 0 auto;
+   padding: 0;
+   border-collapse: collapse;
+ }
+ .slider tr th, .slider tr td {
+  border: 1px solid #999;
+ }
+ .slider th, .slider td {
+   padding: 6px;
+   white-space: nowrap;
+ }
+ @media screen and (max-width: 576px) {
+ .slider {
+   overflow: auto;
+   margin-left: 71px;
+ }
+ .slider tr th:first-child,
+ .slider tr td:first-child {
+   width: 56px;
+   position: absolute;
+   left: 10px;
+ }
+ }
+*/
+
+ table {
+   width: 100%;
+   border-collapse:  collapse;     /* セルの線を重ねる */
+   
+ }
+ th,td {
+   border: solid 1px;              /* 枠線指定 */
+   padding: 5px;                    /* セル内余白 */
+ }
+ 
+/* 
+ @media screen and (max-width: 576px) {
+ .slider {
+   overflow: auto;
+ }
+ }
+*/
+
+.tdcolor{
+   background: #f5f5d3;   
+}
+
+
+.tblcontainer{
+   width: 100%;
+   max-width: 960px;
+   margin-right: auto;
+   margin-left: auto;
+ }
+
+.tblcontainer50{
+   width: 50%;
+   max-width: 960px;
+   margin-right: auto;
+   margin-left: auto;
+ }
+
+ .tblcontainer75{
+   width: 75%;
+   max-width: 960px;
+   margin-right: auto;
+   margin-left: auto;
+ }
+
+.tblscro {
+   overflow-x: auto;
+}
+
+/* 表内縦書き */
+.tbltate{
+   writing-mode: vertical-rl;
+}
+
+/* 表内縦書き中央 <td class="tyuou tblchuou tbltate"> */
+.tbltyuou{
+   vertical-align:middle   
+}
+
+/* 罫線非表示 */
+td.none {
+   border: none;
+}
+/* 横並び（表等）　*/
+ .flex{
+   display: flex;/*コレ*/
+   padding: 15px;
+}
+.flex div{
+   width: 50%;
+   margin: 10px;
+   padding: 10px;
+}
+
+/* 数式　*/
+.siki {
+	margin-left: 3rem;
+   overflow-x: auto;
+}
+
+/* 数式分数を含む　*/
+.siki1 {
+	margin-left: 3rem;
+   overflow-x: scroll;
+   font-size: small;
+}
+
+/* 数式コンテナ（設定しないとスクロール，overflow-x: autoが効かない） */
+.container{
+   width: 75%;
+   max-width: 720px;
+   margin-right: auto;
+   margin-left: auto;
+   overflow-x: auto;
+}
+
+/* 数式スクロール */
+.math-scroll {
+	overflow-x: auto;
+}
+
+/* 画像位置等 */
+/*img {
+   background-color: transparent;
+   width: 75%;
+   height: auto;
+   margin: auto;  
+}*/
+
+
+/* 画像基本*/
+ @media screen and (min-width: 576px) {
+   img {
+   background-color: transparent;
+   margin: auto;
+   width: 60%;
+   }
+}
+
+
+/* 画像基本で，スマホ表示で画像がはみ出すので下記追加 */
+/* https://materializer.co/lab/blog/64 */
+
+img {
+   max-width: 100%;
+   height: auto;
+}
+
+/* 画像table内 2023.2.4現在効かない */
+ .table img{
+   /* max-width: 100%; */
+   width: 100%;
+   height: auto;
+}
+
+ /* 画像問題選択肢中の図記号 */
+
+img.mon {
+   background-color: transparent;
+   width: auto;
+   height: 25px;
+   margin: auto; 
+   vertical-align: middle
+}
+img.mon30 {
+   background-color: transparent;
+   width: auto;
+   height: 30px;
+   margin: auto; 
+   vertical-align: middle
+}
+
+/* 画像キャプション */
+.imgcap {
+   text-align: center;
+   font-weight: bold;
+   margin-bottom: 1rem; 
+}
+/* 画像コピーライト */
+.imgcr {
+   text-align: center;
+   font-size: 50%;
+}
+
+/* YouTube埋め込み　https://web-dev.tech/front-end/css/embed-youtube-iframe-with-proportion/ */
+
+.youtube {
+   display: block;
+   margin: 0 auto;
+   max-width: 100%;
+ }
+
+.video {
+   position: relative;
+   width:100%; /* 横幅は100%にしておく(ここを変えたい場合は実装コード2の方法を確認してください) */
+   height:0; /* 高さは0にしておく(padding-topで高さを指定するため) */
+   padding-top: 56.25%; /* 高さを指定(16:9) */
+ }
+ 
+ /* YouTube埋め込み用のiframe */
+ .video iframe{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+ }
+
+ /* 画像を横並びにする　https://webst8.com/blog/css-flex/ */ 
+ *{
+   box-sizing: border-box;
+ }
+#flexbox{
+  display:flex;
+  justify-content:center;
+  flex-wrap: wrap;
+  background:#ffffcc;
+  width: 100%;
+  height:auto;
+  padding:0 20px;
+}
+.box-item{
+  background:#ffffcc;
+  text-align: center;
+  padding:0 10px;
+  border:none;
+}
+
+/*eq*/
+
+
+.eh10{
+   height: 10pt;
+}
+
+.eh11{
+   height: 11pt;
+}
+
+.eh12{
+   height: 12pt;
+}
+
+.eh13{
+   height: 13pt;
+}
+
+.eh14{
+   height: 14pt;
+}
+
+.eh15{
+   height: 15pt;
+}
+
+.eh16{
+   height: 16pt;
+}
+
+.eh17{
+   height: 17pt;
+}
+
+.eh18{
+   height: 18pt;
+}
+
+.eh19{
+   height: 19pt;
+}
+
+.eh20{
+   height: 20pt;
+}
+
+.eh25{
+   height: 25pt;
+}
+
+.eh26{
+   height: 26pt;
+}
+
+.eh27{
+   height: 27pt;
+}
+
+.eh28{
+   height: 28pt;
+}
+
+.eh29{
+   height: 29pt;
+}
+
+.eh30{
+   height: 30pt;
+}
+
+.eh31{
+   height: 31pt;
+}
+
+.eh32{
+   height: 32pt;
+}
+
+.eh33{
+   height: 33pt;
+}
+
+.eh34{
+   height: 34pt;
+}
+
+.eh35{
+   height: 35pt;
+}
+
+.eh36{
+   height: 36pt;
+}
+
+.eh37{
+   height: 37pt;
+}
+
+.eh38{
+   height: 38pt;
+}
+
+.eh39{
+   height: 39pt;
+}
+
+.eh40{
+   height: 40pt;
+}
+
+.eh41{
+   height: 41pt;
+}
+
+.eh42{
+   height: 42pt;
+}
+
+.eh43{
+   height: 43pt;
+}
+
+.eh44{
+   height: 44pt;
+}
+
+.eh45{
+   height: 45pt;
+}
+
+.eh50{
+   height: 50pt;
+}
+
+.eh55{
+   height: 55pt;
+}
+
+.eh60{
+   height: 60pt;
+}
+
+
+.eh65{
+   height: 65pt;
+}
+
+.eh70{
+   height: 70pt;
+}
+
+
+
+
+
+
+
+
+
+.es8{
+   padding: 0px 3px;
+   width: auto;
+   vertical-align: middle;
+   height: 8pt;
+}
+
+.es9{
+   padding: 0px 3px;
+   width: auto;
+   vertical-align: middle;
+   height: 9pt;
+}
+
+.es10{
+   padding: 0px 3px;
+   width: auto;
+   vertical-align: middle;
+   height: 10pt;
+}
+
+.es11{
+   padding: 0px 3px;
+   width: auto;
+   vertical-align: middle;
+   height: 11pt;
+}
+
+.es12{
+   padding: 0px 3px;
+   width: auto;
+   vertical-align: middle;
+   height: 12pt;
+}
+
+.es13{
+   padding: 0px 3px;
+   width: auto;
+   vertical-align: middle;
+   height: 13pt;
+}
+
+.es14{
+   padding: 0px 3px;
+   width: auto;
+   vertical-align: middle;
+   height: 14pt;
+}
+
+.es15{
+   padding: 0px 3px;  
+   width: auto;
+   vertical-align: middle;
+   height: 15pt;
+}
+
+.es16{
+   padding: 0px 3px;  
+   width: auto;
+   vertical-align: middle;
+   height: 16pt;
+}
+
+.es17{
+   padding: 0px 3px;  
+   width: auto;
+   vertical-align: middle;
+   height: 17pt;
+}
+
+.es18{
+   padding: 0px 3px;  
+   width: auto;
+   vertical-align: middle;
+   height: 18pt;
+}
+
+.es19{
+   padding: 0px 3px;  
+   width: auto;
+   vertical-align: middle;
+   height: 19pt;
+}
+
+.es20{
+   padding: 0px 3px;  
+   width: auto;
+   vertical-align: middle;
+   height: 20pt;
+}
+
+.es21{
+   padding: 0px 3px;  
+   width: auto;
+   vertical-align: middle;
+   height: 21pt;
+}
+
+.es22{
+   padding: 0px 3px;  
+   width: auto;
+   vertical-align: middle;
+   height: 22pt;
+}
+
+.es23{
+   padding: 0px 3px;  
+   width: auto;
+   vertical-align: middle;
+   height: 23pt;
+}
+
+.es24{
+   padding: 0px 3px;  
+   width: auto;
+   vertical-align: middle;
+   height: 24pt;
+}
+
+.es25{
+   padding: 0px 3px;  
+   width: auto;
+   vertical-align: middle;
+   height: 25pt;
+}
+
+.es26{
+   padding: 0px 3px;  
+   width: auto;
+   vertical-align: middle;
+   height: 26pt;
+}
+
+.es27{
+   padding: 0px 3px;  
+   width: auto;
+   vertical-align: middle;
+   height: 27pt;
+}
+
+.es28{
+   padding: 0px 3px;  
+   width: auto;
+   vertical-align: middle;
+   height: 28pt;
+}
+
+.es29{
+   padding: 0px 3px;  
+   width: auto;
+   vertical-align: middle;
+   height: 29pt;
+}
+
+.es30{
+   padding: 0px 3px;  
+   width: auto;
+   vertical-align: middle;
+   height: 30pt;
+}
+
+.es35{
+   padding: 0px 3px;  
+   width: auto;
+   vertical-align: middle;
+   height: 35pt;
+}
+
+.es40{
+   padding: 0px 3px;  
+   width: auto;
+   vertical-align: middle;
+   height: 40pt;
+}
+
+
+
+
+
+
+
+
